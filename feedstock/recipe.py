@@ -84,7 +84,7 @@ recipe = XarrayZarrRecipe(
     pattern,
     inputs_per_chunk=1,
     consolidate_zarr=True,
-    subset_inputs={'time': 120},
+    open_input_with_kerchunk=True,
     target_chunks={'time': 1},
     process_chunk=postproc,
     xarray_open_kwargs={'decode_coords': True, 'use_cftime': True, 'decode_times': True},
